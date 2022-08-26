@@ -45,12 +45,17 @@ div.sidebar-menu {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   font-weight: 800;
+  transition: box-shadow 0.3s ease-out;
+  transition: border-color 0.3s ease-out;
+  transition: border-width 0.3s ease-in;
 }
 
 .sidebar-menu:hover {
-  border-style: none;
+  border-color: #fff;
+  border-width: 4px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.507);
 }
 
 a.sidebar-link {
