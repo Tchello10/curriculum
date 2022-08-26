@@ -198,7 +198,7 @@ a:hover {
 }
 
 /* Responsiveness */
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1080px) {
   div.sidebar {
     width: 0;
     height: 0;
