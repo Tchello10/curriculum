@@ -1,58 +1,11 @@
-/* Animações */
-@keyframes animaCenter {
-  0% {
-    width: 0;
-    height: 2px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-  }
-
-  50% {
-    width: 50%;
-    height: 2px;
-  }
-
-  75% {
-    height: 185px;
-  }
-
-  100% {
-    width: 50%;
-    height: auto;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgba(255, 255, 255, 0.425);
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 18px;
-  }
-}
-
-@keyframes animaImagens {
-  0% {
-    opacity: 0%;
-  }
-
-  90% {
-    opacity: 0%;
-  }
-
-  100% {
-    opacity: 100%;
-  }
-}
-
 /* Body, main e bg */
 body {
+  display: flex;
   margin: 0px;
   padding: 0px;
 }
 
-.bg {
+body.bg {
   background-image: url(../BGLogo/BGPadrao.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -109,7 +62,7 @@ a.sidebar-link {
 div.centraliza-div {
   display: flex;
 
-  width: 50%;
+  width: 60%;
   height: auto;
   border-style: solid;
   border-width: 2px;
@@ -134,7 +87,7 @@ div.centraliza-div {
 div.central-content {
   display: flex;
 
-  width: 50%;
+  width: 60%;
   height: auto;
   border-style: solid;
   border-width: 2px;
@@ -147,6 +100,7 @@ div.central-content {
   justify-content: left;
   text-align: center;
   flex-wrap: wrap;
+  flex-direction: column;
   margin: 30px auto;
   transition: box-shadow 0.3s ease-out;
 }
@@ -239,17 +193,25 @@ a:hover {
 }
 
 /* Responsiveness */
-/* @media only screen and (max-width: 960px) {
-  .bg {
-    background-image: url(../Content/BG03_Phone.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+@media only screen and (max-width: 1366px) {
+  div.sidebar {
+    width: 0;
+    height: 0;
   }
 
-  .centralizaDiv {
-    width: 100%;
+  div.centraliza-div {
+    width: 95%;
     height: auto;
     border: 0px;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.425);
   }
-} */
+
+  div.central-content {
+    width: 95%;
+    height: auto;
+    border: 0px;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.425);
+  }
+}
